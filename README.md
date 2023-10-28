@@ -2,7 +2,7 @@
 - Verilog Modules that emulate LUTs and CARRY4 of Xilinx FPGAs
 
 ## Overview
-- It's enables verilog code with Xilinx FPGA-specific LUTs and CARRY4 mapping description to be executed on a general purpose simulator such as iverilog.
+- It enables verilog code with Xilinx FPGA-specific LUTs and CARRY4 mapping description to be executed on a general purpose simulator such as iverilog.
 - Modules based on [UG953](https://docs.xilinx.com/r/en-US/ug953-vivado-7series-libraries/Introduction)
 
 ## CYINIT and CI inputs in CARRY4
