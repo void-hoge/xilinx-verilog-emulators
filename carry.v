@@ -1,8 +1,11 @@
 module CARRY4 (input wire CI, CYINIT, input wire[3:0] DI, input wire[3:0] S, output wire[3:0] CO, output wire[3:0] O);
    wire	ci;
+   wire	cyinit;
+   wire	cin;
    wire [3:0] d;
    wire [3:0] s;
-   assign ci = (CYINIT !== 1'bz) ? CYINIT : ((CI !== 1'bz) ? CI : 0);
+   //assign ci = (CYINIT !== 1'bz) ? CYINIT : ((CI !== 1'bz) ? CI : 0);
+   assign ci = ((CI !== 1'bz) ? CI : 0) | ((CYINIT !== 1'bz) ? CYINIT : 0);
    assign d = (DI !== 4'bzzzz) ? DI : 4'b0000;
    assign s = (S !== 4'bzzzz) ? S : 4'b0000;
    assign O[0] = ci ^ s[0];

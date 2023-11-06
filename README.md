@@ -10,4 +10,5 @@
   - CI is used to cascade previous carry output when constructing a carry chain with multiple CARRY4s.
   - CYINIT is used to input 0 or 1 as an immediete value, such as at the bottom of the carry chain.
 - Vivado doesn't make much of a distinction between these and automatically connects them to the desired physical port.
-- In this implementation, if something is connected to CYINIT (if not high impedance) it takes precedence.
+- In this implementation, bitwise or of CYINIT and CI is taken.
+  - If a port is not connected to anything, it will be 0.
